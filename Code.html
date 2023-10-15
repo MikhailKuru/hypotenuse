@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+    <html>
+    <body>
+        <form>
+            <pre>
+            This program will calculate the hypotenuse of a triangle
+            Side 1 <input type="text" name="a" size=15>
+
+            Side 2 <input type="text" name="b" size=15>
+
+            Hypotenuse <input type="text" name="result" size=15>
+
+            <input type="button" value="calculate" onclick="compute(this.form)">
+
+
+
+            </pre>
+        </form>
+
+    <script>
+        function compute(form){
+            var A = eval(form.a.value);
+            var B = eval(form.b.value);
+            
+            with(Math){
+                var C = sqrt( ( (pow(A ,2)+pow(B, 2)) ) );
+            };
+            
+            form.result.value = C;
+        }
+    </script>
+    </body>
+    </html>
